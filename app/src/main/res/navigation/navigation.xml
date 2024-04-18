@@ -3,21 +3,46 @@
              xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/loginFragment">
-
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.formapp.ui.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_ToCreateAccount"
+            app:destination="@id/createAccountFragment" />
+        <action
+            android:id="@+id/action_toLogin"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.formapp.ui.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        android:label="LoginFragment" >
         <action
-            android:id="@+id/fromLoginToComplaint"
-            app:destination="@id/complaintFragment" />
-        <argument android:name="id" />
+            android:id="@+id/action_ToMarketing"
+            app:destination="@id/marketingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createAccountFragment"
+        android:name="com.example.formapp.ui.CreateAccountFragment"
+        android:label="fragment_create_account"
+        tools:layout="@layout/fragment_create_account" >
+        <action
+            android:id="@+id/action_ToLoginFromCreateAccount"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/complaintFragment"
         android:name="com.example.formapp.ui.ComplaintFragment"
-        android:label="fragment_complaint"
-        tools:layout="@layout/fragment_complaint" />
+        android:label="ComplaintFragment" />
+    <fragment
+        android:id="@+id/marketingFragment"
+        android:name="com.example.formapp.ui.MarketingFragment"
+        android:label="fragment_marketing"
+        tools:layout="@layout/fragment_marketing" >
+        <action
+            android:id="@+id/action_ToComplaint"
+            app:destination="@id/complaintFragment" />
+    </fragment>
 </navigation>

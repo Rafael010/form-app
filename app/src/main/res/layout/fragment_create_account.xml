@@ -16,7 +16,8 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -36,6 +37,7 @@
             android:text="Join the Material UiUx community"
             android:textColor="@color/light_font"
             android:textSize="14sp" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -51,6 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="54dp"
             android:layout_marginBottom="14dp"
+            app:backgroundTint="@null"
             android:background="@drawable/bg_border"
             android:padding="10dp">
 
@@ -58,6 +61,65 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:gravity="center|left"
+                android:hint="Nome Completo"
+                android:textColorHint="@color/text_hint"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_checkmark" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginBottom="14dp"
+            app:backgroundTint="@null"
+            android:background="@drawable/bg_border"
+            android:padding="10dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                app:backgroundTint="@null"
+                android:background="@android:color/transparent"
+                android:gravity="center|left"
+                android:hint="Telefone"
+                android:maxLength="11"
+                android:inputType="phone"
+                android:textColorHint="@color/text_hint"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_checkmark" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginBottom="14dp"
+            app:backgroundTint="@null"
+            android:background="@drawable/bg_border"
+            android:padding="10dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                app:backgroundTint="@null"
                 android:background="@android:color/transparent"
                 android:gravity="center|left"
                 android:hint="Email"
@@ -69,6 +131,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:src="@drawable/ic_checkmark" />
         </RelativeLayout>
@@ -77,6 +140,7 @@
             android:layout_width="match_parent"
             android:layout_height="54dp"
             android:layout_marginBottom="14dp"
+            app:backgroundTint="@null"
             android:background="@drawable/bg_border"
             android:padding="10dp">
 
@@ -95,14 +159,14 @@
         </RelativeLayout>
 
         <Button
-            android:id="@+id/SignIn"
+            android:id="@+id/CreateAccount"
             android:layout_width="match_parent"
             android:layout_height="56dp"
+            app:backgroundTint="@null"
             android:background="@drawable/bg_button"
-            android:text="Login"
+            android:text="Criar conta"
             android:textColor="@color/text_white"
             android:textSize="14sp"
-            android:textStyle="bold"
-            app:backgroundTint="@null" />
+            android:textStyle="bold" />
     </LinearLayout>
 </RelativeLayout>
